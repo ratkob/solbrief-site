@@ -3,32 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How the SolBrief iPhone app handles your data: what stays on your phone, what our server stores, and your choices." />
   <title>Privacy Policy · SolBrief</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #FBF8F3; color: #14212B; max-width: 720px; margin: 0 auto; padding: 40px 24px; line-height: 1.6; }
     h1, h2 { font-family: Georgia, serif; }
     a { color: #1B6B93; font-weight: 600; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid #E2D9C8; vertical-align: top; }
   </style>
 </head>
 <body>
+  <main>
   <p><a href="../">&larr; Back to SolBrief</a></p>
-  <h1>SolBrief Privacy Policy (EU GDPR &amp; Spanish AEPD)</h1>
-  <p><strong>Effective Date:</strong> November 7, 2026 · <strong>Controller:</strong> Ratko Bozovic (Rincon de la Victoria, Malaga, Spain · <a href="mailto:support@ratko.biz">support@ratko.biz</a>)</p>
+  <h1>SolBrief Privacy Policy</h1>
+  <p><strong>Effective date:</strong> 12 November 2026 · <strong>Controller:</strong> Ratko Božović, Rincón de la Victoria, Málaga, Spain · <a href="mailto:solbrief@ratko.biz">solbrief@ratko.biz</a></p>
+  <p>SolBrief is an iPhone app. It needs no account, no email address and no location permission. This page says what the app stores, what leaves your phone, and the two choices you control.</p>
 
-  <h2>1. On-Device Household Profile (Zero Cloud Profile Storage)</h2>
-  <p>Your selected home municipality, secondary towns, children's age brackets, housing status, and car ownership preference are stored strictly on your iPhone in local storage (MMKV). They are never transmitted to any third-party AI provider.</p>
+  <h2>1. What stays on your iPhone</h2>
+  <p>Your home town, the towns you follow and your personal reminders are stored on your iPhone. Your towns and notification choices leave your phone only if you turn notifications on: then they are sent to our server so we can send the alerts you asked for. The app uses these choices to decide what to show you.</p>
 
-  <h2>2. Zero GPS Location Tracking</h2>
-  <p>SolBrief never requests iOS CoreLocation or GPS permissions. Drive-time zones (Zone A &le; 35 min, Zone B 36-150 min) are computed from a static municipality matrix based on the town you select.</p>
+  <h2>2. No location tracking</h2>
+  <p>SolBrief never asks for your location. You pick your towns from a list.</p>
 
-  <h2>3. Dual-Path AI &amp; Spanish PII Redaction (Explain This Letter)</h2>
-  <p>When you scan a Spanish administrative document:</p>
+  <h2>3. What our server stores</h2>
+  <table>
+    <tr><th scope="col">What</th><th scope="col">Why</th></tr>
+    <tr><td>A random app identifier created on first launch</td><td>To tell one copy of the app from another without asking for your name or email</td></tr>
+    <tr><td>Whether that identifier has SolBrief Pro, and until when</td><td>To open paid stories and audio</td></tr>
+    <tr><td>A push notification token and the towns and categories you chose, if you turn notifications on</td><td>To send the alerts you asked for</td></tr>
+    <tr><td>Reports you send with "Report a mistake", including any comment you type</td><td>To correct the story</td></tr>
+  </table>
+  <p>We do not ask for your name or email address, and we do not build a device fingerprint. Our providers' servers briefly log IP addresses for security and to keep the service running. We do not use them to identify you or for analytics. The records above are linked to your random app identifier, not to a name or email.</p>
+
+  <h2>4. Two choices that are off until you turn them on</h2>
+  <p><strong>Share usage statistics.</strong> Only if you agree, the app sends usage statistics (for example which screens are opened) to PostHog on servers in the EU. These statistics are linked to your random app identifier, not to a name or email. Nothing is sent before you choose, and nothing if you decline.</p>
+  <p><strong>Ad measurement.</strong> This is a separate choice in Settings. Only if you turn it on do we show Apple's tracking permission prompt. If you allow it, our measurement partner Singular records which advertisement led to your install, using your device's advertising identifier. Singular also receives your subscription events (trial start, purchase and renewal) from RevenueCat, so we can measure which ads lead to subscriptions. If you leave it off or decline Apple's prompt, no advertising identifier is read. There are no ads inside SolBrief.</p>
+  <p>You can change either choice at any time in Settings &rarr; Privacy.</p>
+
+  <h2>5. Companies that process data for us</h2>
+  <table>
+    <tr><th scope="col">Company</th><th scope="col">Role</th></tr>
+    <tr><td>Supabase (database in Frankfurt, EU)</td><td>Stores the records in section 3</td></tr>
+    <tr><td>Apple</td><td>Payments, push notification delivery</td></tr>
+    <tr><td>RevenueCat</td><td>Confirms subscription status from Apple, linked to the random app identifier. If you allow ad measurement, it also sends your subscription events (trial start, purchase, renewal) to Singular</td></tr>
+    <tr><td>Google Firebase App Check</td><td>Confirms that requests come from a genuine copy of the app</td></tr>
+    <tr><td>PostHog (EU)</td><td>Usage statistics, only with your consent</td></tr>
+    <tr><td>Singular</td><td>Ad measurement, only with your consent and Apple's permission</td></tr>
+  </table>
+  <p>Some of these companies are based outside the EU. Where data leaves the EU it is covered by the European Commission's standard contractual clauses or an adequacy decision.</p>
+
+  <h2>6. Why we may use your data (legal basis)</h2>
   <ul>
-    <li><strong>Apple Intelligence Devices (iPhone 15 Pro+ / iOS 26+):</strong> OCR and document explanation run 100% on-device using Apple Vision and Apple Foundation Models.</li>
-    <li><strong>Non-Apple-Intelligence Devices:</strong> On-device Apple Vision OCR extracts text and a deterministic on-device regex scrubber redacts Spanish NIE, DNI, CIF, IBAN, phone numbers, and email addresses before requesting your explicit one-time consent to send the redacted text to our Supabase Edge Function. Raw document images never leave your device.</li>
+    <li><strong>Running the service you asked for:</strong> the random app identifier, your subscription status, and notifications if you turn them on.</li>
+    <li><strong>Your consent:</strong> usage statistics and ad measurement. You can withdraw consent at any time in Settings &rarr; Privacy.</li>
+    <li><strong>Legitimate interest:</strong> protecting the service from abuse (Firebase App Check) and handling the mistake reports you send.</li>
   </ul>
 
-  <h2>4. Two-Tier GDPR &amp; ePrivacy Analytics Posture</h2>
-  <p>Prior to consent (or if you choose <em>Decline (Essential Only)</em>), PostHog EU runs in cookieless memory-only mode and Firebase Analytics and Singular MMP remain disabled. Only if you tap <em>Accept Analytics</em> do we enable persistent product analytics and request iOS App Tracking Transparency (ATT) permission.</p>
+  <h2>7. How long we keep it</h2>
+  <p>We keep the records in section 3 until you delete them. There is no automatic time limit.</p>
+  <p><strong>Delete my data.</strong> In Settings you can delete your data at any time. This deletes your random app identifier and every record in section 3 linked to it, straight away and for good. Anything that still arrives for the old identifier afterwards (for example a subscription update from Apple) is deleted the same night. The app then starts again with a new random identifier. You can also ask by email (section 9). If you have SolBrief Pro, deleting your data does not cancel the subscription: manage or cancel it in your iPhone's Settings under your Apple Account, Subscriptions. Tap "Restore purchases" in SolBrief to use Pro again with the new identifier.</p>
+  <p>Our database backups are kept for a short time to recover from failures. Data you deleted is never brought back from a backup into the live service.</p>
+  <p>Apple and RevenueCat keep their own records of purchases, which they need for billing and the law, under their own privacy policies.</p>
+
+  <h2>8. Stories are written by AI</h2>
+  <p>SolBrief stories and the audio edition are written and voiced by AI from official sources and local press, and every story lists its sources. Your personal data is not used to write them.</p>
+
+  <h2>9. Your rights</h2>
+  <p>Under the GDPR you can ask to see, correct, delete, receive or restrict the use of the data linked to your app identifier, and you can object to its use. You can also complain to the Spanish data protection authority (AEPD, <a href="https://www.aepd.es">aepd.es</a>).</p>
+  <p>You can delete your data yourself in Settings (section 7). To use your other rights, write to <a href="mailto:solbrief@ratko.biz">solbrief@ratko.biz</a>. Because we do not know who you are, we need your app identifier to find your records. The app shows it in Settings. Without it we cannot tell which records are yours.</p>
+
+  <h2>10. Children</h2>
+  <p>SolBrief is not directed at children, and we do not knowingly collect data from children.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We may update this policy. The effective date at the top shows when it last changed.</p>
+  </main>
 </body>
 </html>
